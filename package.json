@@ -1,0 +1,45 @@
+{
+  "name": "@notificationhub/sdk",
+  "version": "1.0.0",
+  "description": "Official Node.js SDK for the Notification Hub API.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Sumit Shresht",
+  "license": "MIT",
+  "homepage": "https://github.com/sumitshresht/notificationhub-node#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumitshresht/notificationhub-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sumitshresht/notificationhub-node/issues"
+  },
+  "keywords": [
+    "notification",
+    "notifications",
+    "sdk",
+    "typescript",
+    "email",
+    "sms",
+    "push",
+    "webhook",
+    "notification-hub"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
