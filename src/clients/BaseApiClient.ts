@@ -30,15 +30,14 @@ export class BaseApiClient {
 
             if (response.ok) {
                 if (method === 'DELETE' && !text) return { status: 'success' } as any;
-                
-                // 🟢 THE FIX: Explicitly cast the empty object as T
                 return text ? JSON.parse(text) : ({} as T);
             }
 
-            throw new NotificationHubError("API Request Failed", response.status, text);
+            // Delegate to our new Specific Exception Factory
+            throw NotificationHubError.create("API Request Failed", response.status, text);
         } catch (error: any) {
             if (error instanceof NotificationHubError) throw error;
-            throw new NotificationHubError("Execution failed", 0, error.message);
+            throw NotificationHubError.create("Execution failed", 0, error.message);
         }
     }
 }
