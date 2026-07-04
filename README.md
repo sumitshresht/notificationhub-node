@@ -1,6 +1,6 @@
 # Notification Hub Node.js SDK
 
-[![npm version](https://img.shields.io/npm/v/notificationhub-sdk.svg?style=flat-square)](https://www.npmjs.com/package/notificationhub-sdk)
+[![npm version](https://img.shields.io/npm/v/@sumitshresht/notificationhub-sdk.svg?style=flat-square)](https://www.npmjs.com/package/@sumitshresht/notificationhub-sdk)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue.svg?style=flat-square)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
