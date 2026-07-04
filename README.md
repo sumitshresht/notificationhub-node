@@ -8,6 +8,14 @@ The official enterprise-grade Node.js client for the **Notification Hub API**.
 
 Build reliable, omni-channel notification workflows (Email, SMS, Push, In-App, and Webhooks) with built-in cryptographic security, strict TypeScript definitions, and robust dead-letter queue (DLQ) management.
 
+## 📖 Documentation
+
+Comprehensive documentation, API reference, guides, and examples are available at:
+
+👉 **https://docs.notificationhub.dev-space.dev**
+
+---
+
 ## ✨ Features
 
 * **Omni-Channel Dispatch:** Send messages across Email, SMS, Push, Webhooks, and In-App through a unified API.
@@ -46,7 +54,7 @@ import { NotificationHubClient } from 'notificationhub-sdk';
 const client = new NotificationHubClient.Builder()
     .apiKey(process.env.NH_API_KEY)
     .apiSecret(process.env.NH_API_SECRET)
-    .baseUrl("https://api.your-hub-domain.com") // Optional: Defaults to production
+    .baseUrl("process.env.NH_BASE_URL") // Optional: Defaults to production
     .build();
 
 ```
