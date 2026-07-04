@@ -32,11 +32,11 @@ Comprehensive documentation, API reference, guides, and examples are available a
 Install the package using your preferred package manager:
 
 ```bash
-npm install notificationhub-sdk
+npm install @sumitshresht/notificationhub-sdk
 # or
-yarn add notificationhub-sdk
+yarn add @sumitshresht/notificationhub-sdk
 # or
-pnpm add notificationhub-sdk
+pnpm add @sumitshresht/notificationhub-sdk
 
 ```
 
@@ -49,7 +49,7 @@ pnpm add notificationhub-sdk
 Initialize the client using the secure Builder pattern. Your `apiSecret` is never transmitted over the network; it is used locally to generate HMAC signatures.
 
 ```typescript
-import { NotificationHubClient } from 'notificationhub-sdk';
+import { NotificationHubClient } from '@sumitshresht/notificationhub-sdk';
 
 const client = new NotificationHubClient.Builder()
     .apiKey(process.env.NH_API_KEY)
@@ -64,7 +64,7 @@ const client = new NotificationHubClient.Builder()
 Use the Fluent Builder to construct complex, multi-channel notification requests.
 
 ```typescript
-import { NotificationRequest, ChannelType } from 'notificationhub-sdk';
+import { NotificationRequest, ChannelType } from '@sumitshresht/notificationhub-sdk';
 
 async function sendAlert() {
     const request = NotificationRequest.builder()
@@ -113,7 +113,7 @@ const trackingPixel = await client.notifications().trackOpen("notification_uuid"
 Manage rich HTML templates with dynamic variable injection.
 
 ```typescript
-import { TemplateRequest } from 'notificationhub-sdk';
+import { TemplateRequest } from '@sumitshresht/notificationhub-sdk';
 
 // Create a Template
 const templateReq = TemplateRequest.builder()
@@ -138,7 +138,7 @@ console.log(preview.renderedHtml);
 Dynamically configure downstream infrastructure (SendGrid, Twilio, Firebase, etc.).
 
 ```typescript
-import { ChannelType } from 'notificationhub-sdk';
+import { ChannelType } from '@sumitshresht/notificationhub-sdk';
 
 // Configure a Webhook Provider
 await client.providers().configure(ChannelType.WEBHOOK, "PRIMARY_HOOK", {
@@ -160,7 +160,7 @@ await client.providers().testConnection(ChannelType.EMAIL, {
 Manage child projects, rotate secrets, and suspend access programmatically.
 
 ```typescript
-import { ProjectStatus } from 'notificationhub-sdk';
+import { ProjectStatus } from '@sumitshresht/notificationhub-sdk';
 
 // Create a new Tenant/Project
 const newProject = await client.projects().create("Client_A_Production");
@@ -204,7 +204,7 @@ import {
     NotificationHubError, 
     NotificationHubRateLimitError, 
     NotificationHubValidationError 
-} from 'notificationhub-sdk';
+} from '@sumitshresht/notificationhub-sdk';
 
 try {
     await client.notifications().send(request);
